@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<MenuBar xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="gobblets.ihm.controleur.EcouteurMenus">
+  <Menu text="Fichier">
+    <MenuItem text="Nouveau" onAction="#onNouveau"/>
+    <MenuItem text="Ouvrir" onAction="#onOuvrir"/>
+    <SeparatorMenuItem/>
+    <MenuItem text="Enregistrer" onAction="#onEnregistrer" fx:id="enregistrer"/>
+    <MenuItem text="Enregistrer sous" onAction="#onEnregistrerSous" fx:id="enregistrerSous"/>
+    <SeparatorMenuItem/>
+    <MenuItem text="Quitter" onAction="#onQuitter"/>
+  </Menu>
+  <Menu text="Langue">
+    <fx:define>
+      <ToggleGroup fx:id="langage"/>
+    </fx:define>
+  	<RadioMenuItem text="Français" onAction="#onChangeLangueFR" fx:id="fr" selected="true" toggleGroup="$langage" />
+    <RadioMenuItem text="Anglais" onAction="#onChangeLangueEN" fx:id="en" toggleGroup="$langage" />
+    <RadioMenuItem text="Allemand" onAction="#onChangeLangueGER" fx:id="ger" toggleGroup="$langage" />
+  </Menu>
+  <Menu text="Aide">
+    <MenuItem text="A propos" onAction="#onAPropos"/>
+  </Menu>
+</MenuBar>
